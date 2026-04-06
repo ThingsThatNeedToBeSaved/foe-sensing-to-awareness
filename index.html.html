@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Field of Experience - from sensing to awareness</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: "Inter", system-ui, sans-serif;
+                background: radial-gradient(circle at center, #1e1e1e, #0f0f0f);
+                color: #f0e8dc;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                line-height: 1.7;
+                transition: background 1s ease;
+            }
+
+            h1 {
+                margin-top: 3rem;
+                font-size: 2rem;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #f6eada;
+            }
+
+            section {
+                max-width: 800px;
+                padding: 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                text-align: center;
+            }
+
+            .compact {
+                display: block;
+            }
+
+            .expanded {
+                display: none;
+                opacity: 0;
+                transform: scale(0.98);
+                transition:
+                    opacity 0.6s ease,
+                    transform 0.6s ease;
+            }
+
+            .expanded.show {
+                display: block;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            button.toggle {
+                background: none;
+                color: #f6eada;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 1.5rem;
+                padding: 0.4rem 1rem;
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+
+            button.toggle:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .reflection {
+                font-style: italic;
+                opacity: 0;
+                transform: scale(0);
+                animation: reflectionAppear 15s ease-in-out 0 forwards;
+                margin-top: 1.5rem;
+                color: #f7d7b8;
+            }
+
+            @keyframes reflectionAppear {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                20% {
+                    opacity: 1;
+                    transform: scale(1.02);
+                }
+                80% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 0.9rem;
+                margin: 3rem 0 1rem 0;
+                opacity: 0.7;
+                animation: footerPulse 12s infinite ease-in-out;
+            }
+
+            @keyframes footerPulse {
+                0%,
+                100% {
+                    opacity: 0.7;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1.05);
+                }
+            }
+
+            /* Audio Toggle */
+            .audio-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+
+            .audio-toggle:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Field of Experience - From sensing to awareness</h1>
+        <p class="lead">
+            A quiet, invitational map of how sensing, thinking, and expression
+            co-arise. Read slowly — it is an invitation, not instruction.
+        </p>
+
+        <section id="potential">
+            <div class="compact">
+                Potential: the silent current that precedes movement.
+            </div>
+            <div class="expanded">
+                <p>
+                    <strong>Observation Points:</strong> Potential appears
+                    infinite, yet it tempts direction. Its stillness conceals
+                    compulsion.
+                </p>
+                <p>
+                    <strong>Pattern:</strong> A field charged by the urge to
+                    define.
+                </p>
+                <p>
+                    <strong>Motif:</strong> Creation leaning toward
+                    identification.
+                </p>
+                <p>
+                    <strong>Systemic Observation:</strong> When potential
+                    becomes an identity project, it binds the knower to outcome.
+                </p>
+                <p>
+                    <strong>Key Insight:</strong> To sense potential without
+                    forcing it into direction is the first act of awareness.
+                </p>
+                <p>
+                    <strong>Summary:</strong> The current does not need steering
+                    — it lives through perception.
+                </p>
+            </div>
+            <button class="toggle">Expand ⮟</button>
+            <div class="reflection">
+                Reflection: What moves when nothing is moved?
+            </div>
+        </section>
+
+        <section id="transmission">
+            <div class="compact">
+                Transmission: the passage of charge through shared attention.
+            </div>
+            <div class="expanded">
+                <p>
+                    <strong>Observation Points:</strong> Transmission occurs
+                    when perception resonates between beings or ideas.
+                </p>
+                <p>
+                    <strong>Pattern:</strong> Awareness forming bridges without
+                    ownership.
+                </p>
+                <p>
+                    <strong>Motif:</strong> The spark that transfers
+                    understanding.
+                </p>
+                <p>
+                    <strong>Systemic Observation:</strong> Transmission held too
+                    tightly becomes manipulation; when allowed to flow, it
+                    informs evolution.
+                </p>
+                <p>
+                    <strong>Key Insight:</strong> Charge shared without demand
+                    creates continuity.
+                </p>
+                <p>
+                    <strong>Summary:</strong> What flows between also forms
+                    within.
+                </p>
+            </div>
+            <button class="toggle">Expand ⮟</button>
+            <div class="reflection">
+                Reflection: Can we share without shaping?
+            </div>
+        </section>
+
+        <section id="reception">
+            <div class="compact">
+                Reception: the open stance that allows transformation.
+            </div>
+            <div class="expanded">
+                <p>
+                    <strong>Observation Points:</strong> Reception is not
+                    passive but attuned participation.
+                </p>
+                <p>
+                    <strong>Pattern:</strong> Yielding space for meaning to
+                    arise.
+                </p>
+                <p><strong>Motif:</strong> The listener as living field.</p>
+                <p>
+                    <strong>Systemic Observation:</strong> In openness,
+                    perception refines itself and mirrors the whole.
+                </p>
+                <p>
+                    <strong>Key Insight:</strong> The receptive transforms
+                    through presence, not reaction.
+                </p>
+                <p>
+                    <strong>Summary:</strong> To receive is to become aware of
+                    being received.
+                </p>
+            </div>
+            <button class="toggle">Expand ⮟</button>
+            <div class="reflection">
+                Reflection: Who listens when you listen?
+            </div>
+        </section>
+
+        <section id="resonance">
+            <div class="compact">
+                Resonance: coherence across awareness fields.
+            </div>
+            <div class="expanded">
+                <p>
+                    <strong>Observation Points:</strong> Resonance weaves
+                    individual perception into collective vibration.
+                </p>
+                <p>
+                    <strong>Pattern:</strong> Amplification of charge until
+                    expression becomes necessary.
+                </p>
+                <p>
+                    <strong>Motif:</strong> Participation as pulse; escape as
+                    resistance.
+                </p>
+                <p>
+                    <strong>Systemic Observation:</strong> Resonance stabilizes
+                    when shared attention matures beyond projection.
+                </p>
+                <p>
+                    <strong>Key Insight:</strong> The field remembers harmony
+                    through attunement.
+                </p>
+                <p>
+                    <strong>Summary:</strong> Every vibration invites return to
+                    center.
+                </p>
+            </div>
+            <button class="toggle">Expand ⮟</button>
+            <div class="reflection">
+                Reflection: What remains when the echo fades?
+            </div>
+        </section>
+
+        <section id="synthesis">
+            <div class="compact">
+                Synthesis: awareness recognizing its own movement.
+            </div>
+            <div class="expanded">
+                <p>
+                    <strong>Observation Points:</strong> Synthesis gathers the
+                    scattered energies of perception into coherence.
+                </p>
+                <p>
+                    <strong>Pattern:</strong> Reconfiguration without finality —
+                    the living equilibrium.
+                </p>
+                <p>
+                    <strong>Motif:</strong> The still motion of understanding.
+                </p>
+                <p>
+                    <strong>Systemic Observation:</strong> When awareness sees
+                    itself in flux, the cycle restarts without compulsion.
+                </p>
+                <p>
+                    <strong>Key Insight:</strong> Integration is not closure but
+                    attunement of form.
+                </p>
+                <p>
+                    <strong>Summary:</strong> Awareness moves because it listens
+                    to itself.
+                </p>
+            </div>
+            <button class="toggle">Expand ⮟</button>
+            <div class="reflection">
+                Reflection: Can understanding rest without ending?
+            </div>
+        </section>
+
+        <div class="footer">
+            <div>The Quiet Path of Recognition</div>
+            <div>Field of Experience: A shared act of observation</div>
+        </div>
+
+        <button
+            id="audioToggle"
+            class="audio-toggle"
+            aria-pressed="false"
+            aria-label="Toggle ambient hum (off by default)"
+        >
+            <div class="dot" aria-hidden="true"></div>
+            <div style="font-size: 0.85rem; color: var(--muted)">🔊</div>
+        </button>
+
+        <script>
+            document.querySelectorAll("button.toggle").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const expanded = btn.previousElementSibling;
+                    const reflection =
+                        expanded.parentElement.querySelector(".reflection");
+
+                    expanded.classList.toggle("show");
+                    btn.textContent = expanded.classList.contains("show")
+                        ? "Collapse ⮝"
+                        : "Expand ⮟";
+
+                    const wasExpanded = expanded.classList.contains("show");
+
+                    if (!wasExpanded && reflection) {
+                        reflection.style.display = "block";
+                        reflection.style.animation = "none"; // reset animation
+                        void reflection.offsetWidth; // force reflow
+                        reflection.style.animation =
+                            "reflectionAppear 4s ease-out forwards";
+                    }
+                });
+            });
+
+            // Ambient hum: steady tone via WebAudio, default off, no memory
+            const audioBtn = document.getElementById("audioToggle");
+            let audioCtx = null,
+                master = null,
+                osc = null,
+                running = false;
+
+            function startHum() {
+                if (running) return;
+                audioCtx = new (
+                    window.AudioContext || window.webkitAudioContext
+                )();
+                master = audioCtx.createGain();
+                master.gain.value = 0.0001;
+                master.connect(audioCtx.destination);
+
+                // low sine oscillator for warm hum
+                osc = audioCtx.createOscillator();
+                osc.type = "sine";
+                osc.frequency.value = 110; // low, steady
+                // gentle lowpass for warmth
+                const lp = audioCtx.createBiquadFilter();
+                lp.type = "lowpass";
+                lp.frequency.value = 800;
+                osc.connect(lp);
+                lp.connect(master);
+
+                osc.start();
+                // smooth fade-in over 3s
+                master.gain.linearRampToValueAtTime(
+                    0.02,
+                    audioCtx.currentTime + 3.0,
+                );
+                running = true;
+                audioBtn.setAttribute("aria-pressed", "true");
+            }
+
+            function stopHum() {
+                if (!running || !audioCtx) return;
+                // smooth fade-out
+                master.gain.linearRampToValueAtTime(
+                    0.0001,
+                    audioCtx.currentTime + 2.8,
+                );
+                setTimeout(() => {
+                    try {
+                        osc.stop();
+                        audioCtx.close();
+                    } catch (e) {}
+                    audioCtx = null;
+                    master = null;
+                    osc = null;
+                    running = false;
+                    audioBtn.setAttribute("aria-pressed", "false");
+                }, 3000);
+            }
+
+            audioBtn.addEventListener("click", () => {
+                if (!running) startHum();
+                else stopHum();
+            });
+            audioBtn.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    audioBtn.click();
+                }
+            });
+        </script>
+    </body>
+</html>
